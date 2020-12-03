@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6f51a7e-e53c-437b-ba58-7c1e69188c78" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/shared/inc/_footer.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/shared/inc/_header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shared/inc/_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shared/inc/_nav.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -126,9 +132,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/shared/inc" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\L3_TDSI_2020\projet de fin dAnnee\locations\templates\shared\inc" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -138,7 +155,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606923779844</updated>
-      <workItem from="1606923780982" duration="1574000" />
+      <workItem from="1606923780982" duration="6039000" />
+      <workItem from="1607018253706" duration="596000" />
+      <workItem from="1607019828785" duration="1091000" />
     </task>
     <servers />
   </component>
@@ -146,9 +165,9 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="88" y="166" key="run.anything.popup" timestamp="1606924872504">
+    <state x="88" y="166" key="run.anything.popup" timestamp="1606934165286">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="88" y="166" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606924872504" />
+    <state x="88" y="166" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606934165286" />
   </component>
 </project>
