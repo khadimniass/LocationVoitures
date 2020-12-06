@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6f51a7e-e53c-437b-ba58-7c1e69188c78" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/img/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categories.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Locataire.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Publier.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shared/inc/_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shared/inc/_nav.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +166,7 @@
       <workItem from="1607040716814" duration="646000" />
       <workItem from="1607079609708" duration="5774000" />
       <workItem from="1607101129441" duration="1503000" />
-      <workItem from="1607161745854" duration="1505000" />
+      <workItem from="1607161745854" duration="16109000" />
     </task>
     <servers />
   </component>
@@ -177,9 +178,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1607079794864" />
-    <state x="88" y="166" key="run.anything.popup" timestamp="1607106186781">
+    <state x="88" y="166" width="672" height="677" key="run.anything.popup" timestamp="1607258848789">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="88" y="166" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607106186781" />
+    <state x="88" y="166" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607258848789" />
   </component>
 </project>
