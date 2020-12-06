@@ -15,7 +15,7 @@ class PagesController extends AbstractController
      */
     public function index(CategoryRepository $categoryRepository): Response
     {
-        $categories=$categoryRepository->findBy([],[]);
+        $categories=$categoryRepository->findBy([],['created_at'=>'DESC']);
 
         return $this->render('pages/index.html.twig',compact('categories'));
     }
@@ -25,6 +25,7 @@ class PagesController extends AbstractController
      */
     public function show(Category $category): Response
     {
+
 
         return $this->render('pages/show.html.twig',compact('category'));
     }

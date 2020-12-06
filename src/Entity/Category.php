@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Traits\Timestampable;
 use App\Repository\CategoryRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -10,6 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Category
 {
+    use Timestampable;
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -33,14 +35,10 @@ class Category
     private $description;
 
     /**
-     * @ORM\Column(type="datetime")
-     */
-    private $created_at;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $mark;
+
 
     public function getId(): ?int
     {
@@ -83,18 +81,6 @@ class Category
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeInterface
-    {
-        return $this->created_at;
-    }
-
-    public function setCreatedAt(\DateTimeInterface $created_at): self
-    {
-        $this->created_at = $created_at;
-
-        return $this;
-    }
-
     public function getMark(): ?string
     {
         return $this->mark;
@@ -106,4 +92,5 @@ class Category
 
         return $this;
     }
+
 }
