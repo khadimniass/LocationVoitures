@@ -29,19 +29,26 @@ class Category
     /**
      * @ORM\Column(type="integer")
      * @Assert\NotBlank(message="ce champ ne doit pas être vide")
-     * @Assert\Negative()
      */
     private $price;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank(message="ce champ ne doit pas etre vide")
+     * @Assert\Length(min="mettez au mois 10 carractère")
      */
     private $description;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="ce champ ne doit pas etre vide.")
      */
     private $mark;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $imageName;
 
 
     public function getId(): ?int
@@ -54,7 +61,7 @@ class Category
         return $this->matricul;
     }
 
-    public function setMatricul(string $matricul): self
+    public function setMatricul(?string $matricul): self
     {
         $this->matricul = $matricul;
 
@@ -78,7 +85,7 @@ class Category
         return $this->description;
     }
 
-    public function setDescription(string $description): self
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
 
@@ -90,9 +97,21 @@ class Category
         return $this->mark;
     }
 
-    public function setMark(string $mark): self
+    public function setMark(?string $mark): self
     {
         $this->mark = $mark;
+
+        return $this;
+    }
+
+    public function getImageName(): ?string
+    {
+        return $this->imageName;
+    }
+
+    public function setImageName(?string $imageName): self
+    {
+        $this->imageName = $imageName;
 
         return $this;
     }
