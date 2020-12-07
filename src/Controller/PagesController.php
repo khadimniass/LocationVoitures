@@ -36,6 +36,8 @@ class PagesController extends AbstractController
             $em->persist($category);
             $em->flush();
 
+            $this->addFlash('success','location creer avec succes');
+
             return $this->redirectToRoute('app_home');
 
         }

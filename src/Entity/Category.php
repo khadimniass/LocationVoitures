@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Entity\Traits\Timestampable;
+use Symfony\Component\Validator\Constraints as Assert;
 use App\Repository\CategoryRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -21,11 +22,14 @@ class Category
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank(message="ce champ ne doit pas être vide")
      */
     private $matricul;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="ce champ ne doit pas être vide")
+     * @Assert\Negative()
      */
     private $price;
 
