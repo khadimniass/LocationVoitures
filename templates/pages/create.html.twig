@@ -1,11 +1,17 @@
 {% extends 'base.html.twig' %}
 {% block title 'New locations' %}
 {% block body %}
-    {{form_start(form)}}
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h1 class="mb-5">_</h1>
+            <h1 class="text-center text-muted mb-5">Creation d'annonce</h1>
+                {{form_start(form)}}
 
-    {{form_widget(form)}}
+                {{form_widget(form)}}
 
-    <input type="submit" value="creer une location" class="btn btn-primary btn-block" formnovalidate>
+                <input type="submit" value="creer une location" class="btn btn-primary btn-block" formnovalidate>
 
-    {{form_end(form)}}
+                {{form_end(form)}}
+        </div>
+    </div>
 {% endblock %}

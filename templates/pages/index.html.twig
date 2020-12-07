@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block title 'bienvenue dans notre agence' %}
 {% block body %}
-    <h1>hello</h1>
+    <h1 class="mb-5">_</h1>
     {% if categories|length>0 %}
     <h1 class="text-center text-muted mb-4">{{ pluralize(categories|length, 'photo', 'photos' ) }}</h1>
         {% for category in categories %}

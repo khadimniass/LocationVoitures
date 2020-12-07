@@ -29,12 +29,18 @@ class PagesController extends AbstractController
     {
         $category=new Category();
         $form=$this->createForm(CategoryType::class,$category);
+
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()){
+            $category->setCreatedAt(new \DateTime());
+            $em->persist($category);
+            $em->flush();
 
             return $this->redirectToRoute('app_home');
+
         }
         return $this->render('pages/create.html.twig',[
+            'category'=>$category,
             'form'=>$form->createView()
         ]);
     }
