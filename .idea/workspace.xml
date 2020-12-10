@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6f51a7e-e53c-437b-ba58-7c1e69188c78" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/admin/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/locations.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/locations.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PagesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Traits/Timestampable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Traits/Timestampable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shared/inc/_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shared/inc/_nav.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +129,10 @@
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
     </include_path>
   </component>
   <component name="ProjectId" id="1l6i8ALzCzMYZxzMAaBJ2twG2h4" />
@@ -159,7 +175,9 @@
       <workItem from="1607040716814" duration="646000" />
       <workItem from="1607079609708" duration="5774000" />
       <workItem from="1607101129441" duration="1503000" />
-      <workItem from="1607161745854" duration="41305000" />
+      <workItem from="1607161745854" duration="48608000" />
+      <workItem from="1607599456961" duration="6264000" />
+      <workItem from="1607613320519" duration="603000" />
     </task>
     <servers />
   </component>
@@ -175,9 +193,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1607266816934" />
-    <state x="88" y="166" width="672" height="677" key="run.anything.popup" timestamp="1607364989807">
+    <state x="88" y="166" width="672" height="677" key="run.anything.popup" timestamp="1607606368725">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="88" y="166" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607364989807" />
+    <state x="88" y="166" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607606368725" />
   </component>
 </project>

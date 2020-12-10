@@ -32,7 +32,7 @@ class PagesController extends AbstractController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()){
-            $category->setCreatedAt(new \DateTime());
+            #$category->setCreatedAt(new \DateTime());
             $em->persist($category);
             $em->flush();
 

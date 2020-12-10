@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=CategoryRepository::class)
+ * @ORM\HasLifecycleCallbacks 
  */
 class Category
 {
@@ -29,6 +30,7 @@ class Category
     /**
      * @ORM\Column(type="integer")
      * @Assert\NotBlank(message="ce champ ne doit pas être vide")
+     * @Assert\Range(min="0")
      */
     private $price;
 
@@ -49,6 +51,8 @@ class Category
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $imageName;
+
+
 
 
     public function getId(): ?int
@@ -115,5 +119,7 @@ class Category
 
         return $this;
     }
+
+
 
 }
