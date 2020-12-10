@@ -9,8 +9,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=CategoryRepository::class)
- * @ORM\HasLifecycleCallbacks 
+ * @ORM\HasLifecycleCallbacks
  */
+#HasLifecycleCallbacks : ce trucs sert à entrer automatiquement les Timestampables lors de la création d'un new.
 class Category
 {
     use Timestampable;
