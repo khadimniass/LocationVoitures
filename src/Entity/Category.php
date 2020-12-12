@@ -5,10 +5,13 @@ namespace App\Entity;
 use App\Entity\Traits\Timestampable;
 use Symfony\Component\Validator\Constraints as Assert;
 use App\Repository\CategoryRepository;
+use Symfony\Component\HttpFoundation\File\File;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=CategoryRepository::class)
+ * @Vich\Uploadable
  * @ORM\HasLifecycleCallbacks
  */
 #HasLifecycleCallbacks : ce trucs sert à entrer automatiquement les Timestampables lors de la création d'un new.
@@ -23,7 +26,7 @@ class Category
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100,unique=true)
      * @Assert\NotBlank(message="ce champ ne doit pas être vide")
      */
     private $matricul;
@@ -47,6 +50,17 @@ class Category
      * @Assert\NotBlank(message="ce champ ne doit pas etre vide.")
      */
     private $mark;
+
+    /**
+     * NOTE: This is not a mapped field of entity metadata, just a simple property.
+     *
+     * @Vich\UploadableField(mapping="category_img", fileNameProperty="imageName")
+     * @Assert\image(maxSize="8M")
+     *
+     * @var File|null
+     */
+    private $imageFile;
+
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -108,6 +122,30 @@ class Category
 
         return $this;
     }
+
+    /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile|null $imageFile
+     */
+    public function setImageFile(?File $imageFile = null): void
+    {
+        $this->imageFile = $imageFile;
+
+        //Sans cette condition, on ne peut pas modifier l'image
+        if (null !== $imageFile) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $this->setUpdatedAt( new \DateTimeImmutable);
+        }
+
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+
+
 
     public function getImageName(): ?string
     {

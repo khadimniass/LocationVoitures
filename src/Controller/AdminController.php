@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminController extends AbstractController
 {
     /**
-     * @Route("/adm", name="app_admin")
+     * @Route("/admin", name="app_admin")
      */
     public function index(CategoryRepository $categoryRepository): Response
     {
@@ -23,7 +23,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/adm/{id<[0-9]+>}/edit", name="app_admin_edit",methods={"GET","POST"})
+     * @Route("/admin/{id<[0-9]+>}/edit", name="app_admin_edit",methods={"GET","POST"})
      */
     public function edit(Request $request,Category $category, EntityManagerInterface $em): Response
     {
@@ -44,7 +44,7 @@ class AdminController extends AbstractController
 
 
     /**
-     * @Route("/adm/{id<[0-9]+>}/delete", name="app_admin_delete", methods={"GET","POST","DELETE"})
+     * @Route("/admin/{id<[0-9]+>}/delete", name="app_admin_delete", methods={"GET","POST","DELETE"})
      */
     public function delete(Request $request, EntityManagerInterface $em, Category $category): Response
     {
