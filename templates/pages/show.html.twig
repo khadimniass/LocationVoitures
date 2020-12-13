@@ -1,20 +1,44 @@
 {% extends 'base.html.twig' %}
 {% block title category.mark %}
 {% block body %}
-    <div>
     <h1 style="color: white">_</h1>
-    <h1 class="mt-5 text-center">edition de la locations </h1>
-    <div class="alert alert-success mb-5 mt-5 container" role="alert">
-        <div class="row">
-            <div class="col-md-4">
-                <h2>{{ category.mark}}</h2>
-                <h2>{{ category.matricul}}</h2>
+    <h1 class="mt-5 text-center">présentation de la locations </h1>
+
+    <div class="raw">
+        <div class="col-md-6 mx-auto">
+            <article class="pin bg-white rounded shadow">
+                <div class="mw-100 overflow-hidden rounded-top">
+                    <img src="{{ (category.imageName ? vich_uploader_asset(category) :asset('build/images/defaultImage.jpg'))  | imagine_filter('squared_thumbnail_medium') }}"
+                        alt="{{ category.matricul }}" class="w-100 "/>
+                    <div class="ml-5">
+                        <p>publiée par [Full name] il ya {{ category.created_at }} </p>
+                        <p>
+                            [telephone]
+                        </p>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <small>
+                       <p class="pl-3 pb-3 text-muted">
+                            <time datetime="{{ category.created_at|date() }}"></time>
+                        </p>
+                    </small>
+                    <div class="text-center">
+                        {{ category.description}}
+                    </div>
+
+                    <a href="#" class="text-center btn btn-primary text-center">Louer cet voiture</a>
+                </div>
+
+            <div class="alert alert-success mb-5 mt-5 container" role="alert">
                 <h3 class="text-primary" style="font-weight:bold; font-size: 4rem">
                     {{ category.price | number_format(0, '', ' ') }} FCFA
                 </h3>
-                <p>{{ category.description }}</p>
-
+                <p class="pr-3 pt-3 text-break">
+                    {{ category.description }}
+                </p>
             </div>
+            </article>
         </div>
     </div>
 {% endblock %}
