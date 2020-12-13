@@ -5,9 +5,11 @@
     <h1 class="text-center text-muted mb-4 mt-5">{{ pluralize(categories|length, 'photo', 'photos' ) }}</h1>
         {% for category in categories %}
             <article>
-                <div class="mw-100 overflow-hidden rounded-top">
-                    <img src="{{ (category.imageName ? vich_uploader_asset(category) :asset('build/images/default.png'))  | imagine_filter('squared_thumbnail_medium') }}"
+                <div class="mw-100 rounded-top overflow-hidden">
+                    <a href="{{ path('app_categories_show', {id: category.id})}}">
+                        <img src="{{ (category.imageName ? vich_uploader_asset(category) :asset('build/images/'))  | imagine_filter('squared_thumbnail_medium') }}"
                          alt="{{ category.price }}" class="w-100 "/>
+                    </a>
                 </div>
 
 
