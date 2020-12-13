@@ -47,4 +47,14 @@ class CategoryRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    /**
+     * @return Query
+     */
+    public function findAllVisibleQuery(): Query
+    {
+        $query = $this->findVisibleQuery();
+        return $query->getQuery();
+    }
+
 }

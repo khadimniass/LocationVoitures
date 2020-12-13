@@ -2,31 +2,38 @@
 {% block title 'bienvenue dans notre agence' %}
 {% block body %}
     {% if categories|length>0 %}
-    <h1 class="text-center text-muted mb-4 mt-5">{{ pluralize(categories|length, 'photo', 'photos' ) }}</h1>
-        {% for category in categories %}
-            <article>
-                <div class="mw-100 rounded-top overflow-hidden">
-                    <a href="{{ path('app_categories_show', {id: category.id})}}">
-                        <img src="{{ (category.imageName ? vich_uploader_asset(category) :asset('build/images/'))  | imagine_filter('squared_thumbnail_medium') }}"
-                         alt="{{ category.price }}" class="w-100 "/>
-                    </a>
+        <p class="mt-5 mb-5 bg-white" style="color: white">_</p>
+   {#  <h1 class="text-center text-muted mb-4 mt-5">{{ pluralize(categories|length, 'photo', 'photos' ) }}</h1> #}
+
+        {% for row in categories|batch(4) %}
+                <div class="row mb-5">
+                    {% for category in row %}
+                        <div class="col-md-4 col-lg-4 col-md-6 mb-4">
+                        <article class="category bg-white rounded shadow">
+                            <div class="mw-100 rounded-top overflow-hidden">
+                                    <a href="{{ path('app_categories_show', {id: category.id})}}">
+                                        <img src="{{ (category.imageName ? vich_uploader_asset(category) :asset('build/images/defaultImage.jpg'))| imagine_filter('squared_thumbnail_medium')}}"
+                                         alt="{{ category.matricul }}" class="w-100 "/>
+                                    </a>
+                            </div>
+                            <h2><a href="{{ path('app_categories_show',{id:category.id}) }}">{{ category.mark}}</a></h2>
+                            <h2>{{ category.matricul}}</h2>
+                            <p>{{ category.price|number_format(0,'',' ') }} FCFA</p>
+                            <p>{{ category.description }}</p>
+                        </article>
+                        </div>
+
+                    {% endfor %}
                 </div>
-
-
-
-
-                <h2><a href="{{ path('app_categories_show',{id:category.id}) }}">{{ category.mark}}</a></h2>
-                <h2>{{ category.matricul}}</h2>
-                <p>{{ category.price|number_format(0,'',' ') }} FCFA</p>
-                <p>{{ category.description }}</p>
-
-            </article>
         {% endfor %}
-
         {% else %}
             <div class="text-center">
                 <p class="h1 mt-5 mb-5">Pas de voitures à louer pour l'instant.</p>
                 <a href="{{ path('app_categories_create') }}" class="text-muted">Veillez creer une locations</a>
             </div>
+
     {% endif %}
+    <div class="pagination">
+        {{ knp_pagination_render(categories) }}
+    </div>
 {% endblock %}

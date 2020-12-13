@@ -6,6 +6,7 @@ use App\Entity\Category;
 use App\Form\CategoryType;
 use App\Repository\CategoryRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,9 +17,14 @@ class PagesController extends AbstractController
     /**
      * @Route("/", name="app_home")
      */
-    public function index(CategoryRepository $categoryRepository): Response
+    public function index(CategoryRepository $categoryRepository,PaginatorInterface $paginator, Request $request): Response
     {
-        $categories=$categoryRepository->findBy([],['created_at'=>'DESC']);
+        $cate=$categoryRepository->findBy([],['created_at'=>'DESC']);
+        $categories= $paginator->paginate(
+            $cate,
+            $request->query->getInt('page', 1), /*page number*/
+            3 /*limit per page*/
+        );
 
         return $this->render('pages/index.html.twig',compact('categories'));
     }
@@ -32,7 +38,6 @@ class PagesController extends AbstractController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()){
-            #$category->setCreatedAt(new \DateTime());
             $em->persist($category);
             $em->flush();
 

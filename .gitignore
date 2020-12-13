@@ -15,6 +15,7 @@
 ###< symfony/phpunit-bridge ###
 ###> costum ###
 /public/uploads/
+/public/images
 ###< end ###
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
