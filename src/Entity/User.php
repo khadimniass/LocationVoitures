@@ -41,6 +41,8 @@ class User implements UserInterface
      */
     private $password;
 
+   # public $confirmPassword;
+
     /**
      * @ORM\Column(type="string", length=30)
      */
@@ -81,6 +83,11 @@ class User implements UserInterface
         $this->email = $email;
 
         return $this;
+    }
+
+    public function getFullName(): string
+    {
+        return $this->getfirstName().' '.$this->getLastName() ;
     }
 
     /**
