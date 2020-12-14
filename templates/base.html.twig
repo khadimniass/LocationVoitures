@@ -14,9 +14,9 @@
     {{ include('shared/inc/_nav.html.twig') }}
     {#    {{ include('shared/inc/_header.html.twig') }} #}
     {% include('shared/inc/_flash.html.twig') %}
-    {% block body %}
-
-    {% endblock %}
+    <main class="container" role="main">
+        {% block body %}{% endblock %}
+    </main>
 
     {{ include('shared/inc/_footer.html.twig') }}
     {% block javascripts %}

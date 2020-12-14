@@ -23,20 +23,17 @@
                             <time datetime="{{ category.created_at|date() }}"></time>
                         </p>
                     </small>
-                    <div class="text-center">
+                    <div class="text-center pr-3 pt-3 text-break">
                         {{ category.description}}
                     </div>
 
-                    <a href="#" class="text-center btn btn-primary text-center">Louer cet voiture</a>
+                    <a href="#" class="text-center btn btn-primary text-center">Louer cette voiture</a>
                 </div>
 
             <div class="alert alert-success mb-5 mt-5 container" role="alert">
                 <h3 class="text-primary" style="font-weight:bold; font-size: 4rem">
                     {{ category.price | number_format(0, '', ' ') }} FCFA
                 </h3>
-                <p class="pr-3 pt-3 text-break">
-                    {{ category.description }}
-                </p>
             </div>
             </article>
         </div>

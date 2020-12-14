@@ -16,10 +16,12 @@
                                          alt="{{ category.matricul }}" class="w-100 "/>
                                     </a>
                             </div>
-                            <h2><a href="{{ path('app_categories_show',{id:category.id}) }}">{{ category.mark}}</a></h2>
-                            <h2>{{ category.matricul}}</h2>
-                            <p>{{ category.price|number_format(0,'',' ') }} FCFA</p>
-                            <p>{{ category.description }}</p>
+                            <div class="ml-5">
+                                <h2><a href="{{ path('app_categories_show',{id:category.id}) }}">{{ category.mark}}</a></h2>
+                                <h2>{{ category.matricul}}</h2>
+                                <p>{{ category.price|number_format(0,'',' ') }} FCFA</p>
+                                <p class="pr-3 pt-3 text-break">{{ category.description }}</p>
+                            </div>
                         </article>
                         </div>
 
