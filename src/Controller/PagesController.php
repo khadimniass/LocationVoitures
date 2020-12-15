@@ -60,5 +60,13 @@ class PagesController extends AbstractController
 
 
         return $this->render('pages/show.html.twig',compact('category'));
+    }    /**
+     * @Route("/aboutus", name="app_about_us")
+     */
+    public function aboutUs(): Response
+    {
+
+
+        return $this->render('pages/about.html.twig');
     }
 }

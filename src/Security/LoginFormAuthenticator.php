@@ -50,7 +50,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
     {
         $credentials = [
             'email' => $request->request->get('email'),
-            'password' => $request->request->get('password'),
+            'password' => $request->request->get('plainPassword'),
             'csrf_token' => $request->request->get('_csrf_token'),
         ];
         $request->getSession()->set(
@@ -72,7 +72,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
 
         if (!$user) {
             // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Email could not be found.');
+            throw new CustomUserMessageAuthenticationException('Invalid email or password.');
         }
 
         return $user;
